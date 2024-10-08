@@ -3,6 +3,7 @@ import * as SplashScreen from "expo-splash-screen";
 import { useFonts } from "expo-font";
 import { useEffect } from "react";
 import { RootSiblingParent } from "react-native-root-siblings";
+import { ActivityIndicator, View } from "react-native";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -26,6 +27,14 @@ const InitialLayout: React.FC = () => {
       SplashScreen.hideAsync();
     }
   }, [loaded, error]);
+
+  if (!loaded) {
+    return (
+      <View className="flex-1 items-center justify-center">
+        <ActivityIndicator size="large" color="#000" />
+      </View>
+    );
+  }
 
   return (
     <Stack>

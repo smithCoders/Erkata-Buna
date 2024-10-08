@@ -7,7 +7,7 @@ const HomeScreen: React.FC = () => {
   return (
     <SafeAreaView className="h-full">
       <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
-        <Redirect href="/onBoardingSCreen" />
+        <Redirect href="/(auth)/login" />
       </ScrollView>
       <StatusBar backgroundColor="#000" style="light" />
     </SafeAreaView>

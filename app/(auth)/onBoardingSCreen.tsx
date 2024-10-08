@@ -42,7 +42,7 @@ const OnBoadingScreen = () => {
           <View className="absolute top-[60px] right-5 z-20">
             <TouchableOpacity
               onPress={() => {
-                router.replace("/(auth)/signUp");
+                router.replace("/(auth)/login");
               }}
               activeOpacity={1}
             >
